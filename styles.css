@@ -9,7 +9,6 @@ html{
 }
 
 body{
-    height:200vh;
     margin: 0 10% 0 10%;
     overflow-x: hidden;
     min-height: max-content;
@@ -20,7 +19,6 @@ nav{
     position: fixed;
     height: 10vh;
     width: 80%;
-    border: 1px solid red;
     min-height: 70px;
 }
 
@@ -44,8 +42,8 @@ nav .nav-content{
     
 }
 #landing{
-    padding-top: 10vh;
     height: 100vh;
+    min-height: max-content;
     background-color: aquamarine;
     
 }
@@ -55,7 +53,6 @@ nav .nav-content{
     text-align: center;
     margin: 0 auto;
     font-family: "Space Grotesk", 'Courier New', Courier, monospace;
-    border: 1px solid green;
     
 }
 
@@ -84,7 +81,6 @@ h1 span{
 .buttons{
     margin: 10vh auto;
     text-align: center;
-    border: 1px solid red;
     max-height: max-content;
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +95,7 @@ h1 span{
     border: none;
     width: 150px;
     padding: .7rem 1.5rem;
+    background-color: white;
     
     
     
@@ -121,6 +118,7 @@ h1 span{
         text-align: center;
     }
     .buttons{
+        align-items: center;
         display: flex;
         flex-direction: column;
     }
