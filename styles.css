@@ -12,6 +12,11 @@ body{
     margin: 0 10% 0 10%;
     overflow-x: hidden;
     min-height: max-content;
+    background: linear-gradient(rgba(255, 255, 255, 5%), 
+    rgba(0, 0, 0, 80%)),
+    url(img/background.jpg);
+
+    background-size: cover;
 }
 
 
@@ -26,11 +31,12 @@ nav .nav-content{
     height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0;
 }
 
 .logo img{
-    height: 90%;
+    height: 80%;
 }
 
 .nav-content ul{
@@ -42,9 +48,8 @@ nav .nav-content{
     
 }
 #landing{
-    height: 100vh;
-    min-height: max-content;
-    background-color: aquamarine;
+    min-height: 100vh;
+    height: max-content;
     
 }
 .greet{
@@ -95,7 +100,9 @@ h1 span{
     border: none;
     width: 150px;
     padding: .7rem 1.5rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 50%);
+    margin-top: 5%;
+    opacity: .8;
     
     
     
