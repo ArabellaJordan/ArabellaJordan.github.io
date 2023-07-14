@@ -1,189 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap');
-
-
-html{
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Raleway:wght@100&display=swap');
+:root{
+    --dark:#03191E;
+    --light: #F7F7FF;
+    --red: #E6113B;
+    --gray: #7D8491;
+}
+*{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
     box-sizing: border-box;
-    font-size: 20px;
-    font-family: "Space Grotesk", 'Courier New', Courier, monospace;
-    scroll-behavior: smooth;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 body{
-    margin: 0 10% 0 10%;
-    overflow-x: hidden;
-    min-height: max-content;
-    background: linear-gradient(rgba(255, 255, 255, 5%), 
-    rgba(0, 0, 0, 80%)),
-    url(img/background.jpg);
-    background-size: cover;
-    cursor: default;
+    background-color: var(--dark);
+    width: 100vw;
 }
 
-ul li{
-    list-style-type: none;
-}
 nav{
-    position: fixed;
-    height: 10vh;
-    width: 80%;
-    min-height: 70px;
-}
-
-nav .nav-content{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-}
-
-.logo img{
-    height: 80%;
-}
-
-.nav-content ul{
-    position: relative;
-    display: flex;
-    justify-content: right;
-    gap: 1rem;
-    
-}
-#landing{
-    min-height: 100vh;
-    height: max-content;
-    
-}
-.greet{
-    max-width: max-content;
-    padding-top: 17%;
-    text-align: center;
-    margin: 0 auto;
-    font-family: "Space Grotesk", 'Courier New', Courier, monospace;
-    
-}
-
-.greet h5{
-    text-align: start;
-    font-size: 2rem;
-    font-weight:100;
-    letter-spacing: 1px;
-}
-.greet h1{
-    font-size: 4rem;
-    margin-top: -15%;
-    font-weight:300;
-    height: max-content;
-}
-h1 span{
-    color: red;
-    font-weight:600;
-}
-
-.greet .option{
-    border: 1px solid red;
-    letter-spacing: 1px;
-    margin-top: -17%;
-    margin-left: 15px;
-    height: 30px;
-    line-height: 30px;
-    overflow: hidden;
-}
-
-.option li{
-    font-size: 1rem;
-    font-weight: 100;
-    position: relative;
-    top: 0;
-    animation: slide 12s steps(3) infinite;
-}
-@keyframes slide{
-    100%{
-        top: -360px;
-    }
-}
-
-.option li span{
-    position: relative;
-    margin: 5px 0;
-    line-height: 30px;
-}
-
-.option li span:after{
-    content: '';
-    position: absolute;
-    left: 0;
+    position: sticky;
+    border: 2px solid pink;
+    height: 70px;
     width: 100%;
-    height: 100%;
-    border-left: 2px solid red;
-    animation: typing 3s steps(10) infinite;
-}
-
-@keyframes typing{
-    40%, 60%{
-        left: calc(100% + 30px);
-    }
-    100%{
-        left: 0;
-    }
-}
-
-.buttons{
-    margin: 10vh auto;
-    text-align: center;
-    max-height: max-content;
+    padding: 0 200px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5%;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--gray);
 }
-
-.buttons button{
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    font-weight: 100;
-    border: none;
-    width: 150px;
-    padding: .7rem 1.5rem;
-    background-color: rgba(255, 255, 255, 50%);
-    margin-top: 5%;
-    opacity: .8;
-    
-    
-    
-    
+.logo{
+    justify-self: flex-start;
+    height: 40px;
 }
-
-@media only screen and (max-width: 700px){ 
-    body{
-        background-color: pink;
-        margin: 0 5%;
-    }
-    nav{
-        width: 90%;
-    }
-
-    #landing{
-        background-color: unset; 
-    }
-    .greet h5, .greet p{
-        text-align: center;
-    }
-    .buttons{
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
+nav ul{
+    display: flex;
+    gap: 30px;
+    font-weight: bold;
 }
-.logo img:hover, nav ul a:hover{
-    -webkit-filter: drop-shadow(3px 3px 3px rgb(100, 100, 100));
-  filter: drop-shadow(3px 3px 3px rgb(100, 100, 100));
-}
-
-.buttons button:hover{
-    cursor: pointer;
-    opacity: 100%;
-    box-shadow: 3px 3px 3px black;
-    transform: scale(1.01);
-    animation: 5ms;
-}
-
