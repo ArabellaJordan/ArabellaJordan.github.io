@@ -41,7 +41,6 @@ nav ul{
     font-weight: bold;
 }
 #home{
-    border: 1px solid pink;
     min-height: calc(100vh-70px);
     width: 90%;
     max-width: 1100px;
