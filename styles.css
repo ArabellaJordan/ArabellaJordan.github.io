@@ -22,15 +22,19 @@ body{
 }
 
 nav{
-    position: sticky;
     height: 70px;
     width: 80%;
-    margin: 0 auto;
     display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: space-between;
     color: var(--gray);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
+
 .logo{
     justify-self: flex-start;
     height: 40px;
@@ -41,12 +45,16 @@ nav ul{
     font-weight: bold;
 }
 #home{
-    min-height: calc(100vh-70px);
+    border: 1px solid red;
+    min-height: 100vh;
     width: 90%;
     max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 10%;
+}
+.container{
     display: grid;
-    grid-template-columns: 1fr 30%;
-    margin: 100px auto;
+    grid-template-columns: 1fr 35%;
     gap: 50px;
 }
 .intro{
@@ -54,14 +62,16 @@ nav ul{
     flex-direction: column;
     justify-content: end;
     align-items: end;
-    font-size: 4.5vw;
+    font-size: 3.5vw;
+}
+.intro p{
+    font-size: 60%;
 }
 .red{
     color: var(--red);
-    font-size: 60%;
 }
 .picture{
-    max-height: 400px;
+    max-height: 500px;
     grid-row: span 2;
     border-radius: 200px 100px 90px 150px;
 }
@@ -77,8 +87,13 @@ nav ul{
     height: 30px;
 }
 
+#about{
+    min-height: 100vh;
+}
+
 @media (max-width:700px){
-    #home{
+    #home .container{
+        border: 1px solid blue;
         margin-top: 5vh;
         display: flex;
         flex-direction: column;
