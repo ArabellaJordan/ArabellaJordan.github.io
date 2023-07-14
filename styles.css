@@ -8,6 +8,7 @@
 *{
     font-family: 'Libre Baskerville', serif;
     font-family: 'Raleway', sans-serif;
+    color: var(--light);
     list-style: none;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -22,7 +23,6 @@ body{
 
 nav{
     position: sticky;
-    border: 2px solid pink;
     height: 70px;
     width: 100%;
     padding: 0 200px;
@@ -39,4 +39,38 @@ nav ul{
     display: flex;
     gap: 30px;
     font-weight: bold;
+}
+#home{
+    height: calc(100vh-70px);
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    margin: 100px 200px;
+    gap: 50px;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    font-size: 3.5em;
+}
+.red{
+    color: var(--red);
+    font-size: 2rem;
+}
+.picture{
+    height: 400px;
+    grid-row: span 2;
+    border-radius: 200px 100px 90px 150px;
+}
+
+.icon-container{
+    display: flex;
+    gap: 30px;
+    justify-content: end;
+
+}
+.icon{
+    fill: var(--light);
+    height: 30px;
 }
