@@ -25,7 +25,8 @@ body{
 
 nav{
     height: 70px;
-    width: 80%;
+    width: 100%;
+    padding: 0 10%;
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -35,6 +36,8 @@ nav{
     top: 0;
     left: 0;
     right: 0;
+    box-shadow: 0 1px 40px 1px black;
+    backdrop-filter: blur(5px);
 }
 
 .logo{
@@ -54,9 +57,10 @@ nav ul{
     margin: 0 auto;
     padding-top: 10%;
 }
-#home .container{
+#home .container{  
+    border: 1px solid violet;
     display: grid;
-    grid-template-columns: 1fr 35%;
+    grid-template-columns: 1fr 40%;
     gap: 50px;
 }
 .intro{
@@ -64,10 +68,13 @@ nav ul{
     flex-direction: column;
     justify-content: end;
     align-items: end;
-    font-size: 3.5vw;
+    align-content: end;
+}
+h1{
+    font-size: 5.5vw;
 }
 .intro p{
-    font-size: 60%;
+    font-size: 2.5vw;
 }
 .red{
     color: var(--red);
@@ -99,7 +106,7 @@ nav ul{
 
 #about .container{
     display: grid;
-    grid-template-columns: 35% 1fr;
+    grid-template-columns: 1fr 50%;
 }
 
 @media (max-width:700px){
@@ -109,10 +116,16 @@ nav ul{
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 5vh
     }
     .intro{
         align-items: center;
-        font-size: 7vw;
+    }
+    h1{
+        font-size: 8vw;
+    }
+    .intro p{
+        font-size: 4vw;
     }
     .picture{
         order: -1;
@@ -120,6 +133,9 @@ nav ul{
         max-width: 400px;
         width: 50%;
         max-height: 70%;
+    }
+    .icon-container{
+        padding-top: -5vh;
     }
 }
 
