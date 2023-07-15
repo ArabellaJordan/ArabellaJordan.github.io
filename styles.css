@@ -85,9 +85,7 @@ p{
     color: var(--red);
 }
 .picture{
-    height: 40vh;
-    object-fit: cover;
-    object-position: top;
+    max-height: 500px;
     grid-row: span 2;
     border-radius: 200px 100px 90px 150px;
 }
@@ -130,7 +128,7 @@ p{
 
 @media (max-width:700px){
     #home .container{
-        margin-top: 12vh;
+        margin-top: 17vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -140,7 +138,7 @@ p{
         align-items: center;
     }
     h1{
-        font-size: 8vh;
+        font-size: 8vw;
     }
     .intro p{
         font-size: 4vw;
@@ -150,7 +148,9 @@ p{
         min-width: 300px;
         max-width: 400px;
         width: 50%;
-        max-height: 70%;
+        max-height: 40vh;
+        object-fit: cover;
+        object-position: top;
     }
     .icon-container{
         padding-top: -5vh;
