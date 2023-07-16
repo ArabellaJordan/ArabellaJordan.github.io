@@ -40,6 +40,22 @@ nav{
     backdrop-filter: blur(5px);
 }
 
+button{
+    background: linear-gradient(90deg,var(--red),#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border: none;
+    color: var(--light);
+    height: 30px;
+    min-width: 7em;
+    padding: .5em 1.5em;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
 .logo{
     justify-self: flex-start;
     height: 40px;
@@ -52,17 +68,17 @@ nav ul{
 
 section{
     min-height: 100vh;
-    border: 1px solid green;
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
+
 #home{
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
-#home .container{  
+.home-container{  
     margin-top: 18vh;
     display: grid;
     grid-template-columns: 1fr 40%;
@@ -94,51 +110,67 @@ p{
     display: flex;
     gap: 30px;
     justify-content: end;
+    align-items: start;
 
 }
 .icon{
-    fill: var(--light);
     height: 30px;
-    width: 30px;
+    min-width: 30px;
 }
 
-#about .container{
-    display: grid;
-    grid-template-columns: 1fr 70%;
+
+.container{
     padding-top: 20vh;
+    display: grid;
+    gap: 2em;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.container h1{
+    font-size: 2em;
+}
+
+.container p{
+    font-size: 1.5em;
 }
 .language-logo{
+    grid-row: span 4;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .language-logo svg{
-    height: 6em;
+    max-height: 8em;
 }
-#about .content{
-    border: 1px solid pink;
+
+.about{
+    grid-template-columns: 1fr 70%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+.buttons{
     display: flex;
-    flex-direction: column;
     justify-content: end;
-    align-items: end;
-    text-align: end;
 }
-
-
-
+/*smaller screen*/
 @media (max-width:700px){
     #home .container{
         margin-top: 17vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3h
+        gap: 2vh;
     }
     .intro{
         align-items: center;
     }
     h1{
-        font-size: 8vw;
+        font-size: 10vh;
+        text-align: center;
     }
     .intro p{
         font-size: 4vw;
@@ -150,7 +182,7 @@ p{
         width: 50%;
         max-height: 40vh;
         object-fit: cover;
-        object-position: top;
+        object-position: 10% 10%;
     }
     .icon-container{
         padding-top: -5vh;
