@@ -88,6 +88,9 @@ nav ul{
     gap: 30px;
     font-size: 1.1rem;
 }
+ul img{
+    max-height: 25px;
+}
 
 /*home================*/
 .contents{
