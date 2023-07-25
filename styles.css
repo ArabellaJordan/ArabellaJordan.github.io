@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 :root{
     --dark:#03191E;
     --light: #F7F7FF;
@@ -6,26 +7,64 @@
     --gray: #7D8491;
 }
 *{
-    font-family: 'Libre Baskerville', serif;
     font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
     color: var(--light);
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    overflow-x: hidden;
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    position: relative;
 }
 
-body{
+html{
     background-color: var(--dark);
     width: 100vw;
+    overflow-x: hidden;
 }
 
+.container{
+    border: 1px solid purple;
+    min-height: 100vh;
+    max-width: 1250px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+h1{
+    font-size: 4rem;
+    color: var(--red);
+    font-weight: 400;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+button{
+    background-color: var(--dark);
+    border: 1px solid var(--red);
+    color: var(--light);
+    height: 30px;
+    min-width: 7em;
+    padding: .5em 1.5em;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/*navigation===============================*/
 nav{
     height: 70px;
     width: 100%;
+    z-index: 1;
     padding: 0 10%;
     display: flex;
     margin: 0 auto;
@@ -40,22 +79,6 @@ nav{
     backdrop-filter: blur(5px);
 }
 
-button{
-    background: linear-gradient(90deg,var(--red),#f441a5,#ffeb3b,#03a9f4);
-    background-size: 300%;
-    border: none;
-    color: var(--light);
-    height: 30px;
-    min-width: 7em;
-    padding: .5em 1.5em;
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
 .logo{
     justify-self: flex-start;
     height: 40px;
@@ -63,108 +86,96 @@ button{
 nav ul{
     display: flex;
     gap: 30px;
-    font-weight: bold;
+    font-size: 1.1rem;
 }
 
-section{
-    min-height: 100vh;
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-#home{
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-.home-container{  
-    margin-top: 18vh;
+/*home================*/
+.contents{
+    height: 80vh;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 40%;
-    gap: 50px;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 60% 1fr;
+    gap: 5%;
 }
 .intro{
+    text-align: right;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: end;
     align-content: end;
 }
-h1{
-    font-size: 5.5vw;
+.intro h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(1rem + 4vw);
+    color: var(--light);
+    font-weight: 600;
 }
-p{
-    font-size: 2.5vw;
-}
-.red{
+.intro p{
+    font-size: calc(.5rem + 1vw);
     color: var(--red);
+    font-weight: 400;
+
 }
+
 .picture{
     max-height: 500px;
     grid-row: span 2;
     border-radius: 200px 100px 90px 150px;
+    align-self: center;
 }
 
 .icon-container{
     display: flex;
-    gap: 30px;
     justify-content: end;
-    align-items: start;
+    gap: 5%;
 
 }
 .icon{
     height: 30px;
-    min-width: 30px;
+}
+
+/*about me======================*/
+#about.contents{
+    border: 1px solid greenyellow;
+    grid-template-columns: 1fr 80% ;
+    grid-template-rows: 80% 1fr;
+    gap: 5%;
+    font-weight: 400;
+
 }
 
 
-.container{
-    padding-top: 20vh;
-    display: grid;
-    gap: 2em;
-}
-.left{
-    text-align: left;
-}
-.right{
-    text-align: right;
-}
-.container h1{
-    font-size: 2em;
-}
-
-.container p{
-    font-size: 1.5em;
-}
 .language-logo{
-    grid-row: span 4;
+    grid-row: span 2;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 .language-logo svg{
     max-height: 8em;
 }
 
-.about{
-    grid-template-columns: 1fr 70%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-
-}
 .buttons{
     display: flex;
     justify-content: end;
+    gap: 5%;
 }
-/*smaller screen*/
+
+/*actions====================================*/
+button:hover{
+    box-shadow: 0 0 2px 1px var(--red);
+}
+svg.icon:hover{
+    filter: drop-shadow(1px 1px 2px var(--red));
+}
+
+
+
+
+
+/*smaller screen======================================*/
 @media (max-width:700px){
-    .home-container{
-        margin-top: 17vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2vh;
-    }
+    
     .intro{
         align-items: center;
     }
