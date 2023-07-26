@@ -125,7 +125,7 @@ ul img{
     font-size: calc(1rem + 4vw);
     color: var(--light);
     font-weight: 600;
-    text-shadow: 4px 2px 0 var(--red);
+    text-shadow: 5px 2px 0 var(--red);
 }
 .intro p{
     font-size: calc(.5rem + 1vw);
@@ -233,7 +233,7 @@ svg.icon:hover{
     }
     .container{
         margin: 0 auto;
-        border: 1px solid red;
+        padding-top: 10vh;
     }
     
     .contents{
@@ -243,14 +243,14 @@ svg.icon:hover{
         gap: 2em;
         height: unset;
         min-height: 100%;
-        border: 1px solid green;
     }
     h1{
         font-size: 3rem;
+        text-align: center;
     }
     #home{
         min-height: 100vh;
-        padding-top: 6em;
+        padding-top: 20vh;
     }
     .intro h1{
     font-size: calc(1rem + 5.5vw);
@@ -272,7 +272,6 @@ svg.icon:hover{
         object-position: 10% 10%;
     }
     .icon-container{
-        padding-top: -5vh;
         justify-items: center;
         justify-content: center;
     }
@@ -283,24 +282,30 @@ svg.icon:hover{
     }
     #about h1{
         top: 0;
+        text-align: center;
     }
     #about .text{
         order: 0;
         top: 0;
+        
+       text-align: center;
     }
     #about h2{
         text-shadow: 3px 3px 2px var(--gray);
-        text-align: right;
+        text-align: center;
+        padding-top: 2em;
     }
     #about h2:first-of-type, .language-logo{
         border: none;
         padding: 0;
-        
+        text-align: center;
     }
     #about h2:nth-of-type(2), .education, .buttons{
         order: 1;
     }
     .buttons{
         margin-top: 2em;
+        display: flex;
+        justify-content: center;
     }
 }
