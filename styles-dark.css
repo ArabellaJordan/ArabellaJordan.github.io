@@ -6,7 +6,7 @@
     --red: #E6113B;
     --gray: #7D8491;
 }
-*{
+*, *::before, *::after{
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
     font-size: 18px;
@@ -27,7 +27,6 @@ html{
 }
 
 .container{
-    border: 1px solid purple;
     min-height: 100vh;
     max-width: 1250px;
     width: 90%;
@@ -39,12 +38,24 @@ h1{
     font-size: 4rem;
     color: var(--red);
     font-weight: 600;
+    text-align: right;
+    text-shadow: 5px 2px 0 var(--gray);
 }
-.left{
+h2{
+    font-size: 2rem;
+    font-weight: 400;
     text-align: left;
 }
-.right{
-    text-align: right;
+h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+h4{
+    color: var(--red);
+    font-weight: 400;
+}
+span{
+    font-weight: 400;
 }
 button{
     background-color: var(--dark);
@@ -114,6 +125,7 @@ ul img{
     font-size: calc(1rem + 4vw);
     color: var(--light);
     font-weight: 600;
+    text-shadow: 4px 2px 0 var(--red);
 }
 .intro p{
     font-size: calc(.5rem + 1vw);
@@ -124,9 +136,12 @@ ul img{
 
 .picture{
     max-height: 500px;
+    width: 80%;
+    object-fit: cover;
     grid-row: span 2;
     border-radius: 200px 100px 90px 150px;
     align-self: center;
+    
 }
 
 .icon-container{
@@ -140,33 +155,66 @@ ul img{
 }
 
 /*about me======================*/
-#about.contents{
-    border: 1px solid greenyellow;
-    grid-template-columns: 1fr 80% ;
-    grid-template-rows: 80% 1fr;
-    gap: 5%;
+#about .contents{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25% 10% 1fr 10%;
     font-weight: 400;
+    gap: 2%;
 
 }
+#about h1{
+    grid-column: span 2;
+    text-align: left;
+    top: 20px
+    
+}
 
+.text{
+    top:35px;
+    text-align: right;
+    order:-1;    
+    grid-column: span 4;
+}
 
+#about h2:first-of-type{
+    grid-column: span 3;
+    text-align: right;
+    padding-right: 5%;
+    border-right: 1px solid var(--red);
+}
+#about h2:nth-of-type(2){
+    grid-column: span 3;
+}
 .language-logo{
-    grid-row: span 2;
+    grid-column: span 3;
     display: flex;
+    padding-right: 5%;
+    border-right: 1px solid var(--red);
 }
 .language-logo svg{
     max-height: 8em;
 }
-
+.education{
+    grid-column: span 3;
+    text-align: left;
+}
+.education li{
+    margin-top: 10px;
+}
 .buttons{
+    grid-column: span 6;
+    width: 100%;
     display: flex;
     justify-content: end;
-    gap: 5%;
+    gap: 3%;
 }
 
 /*actions====================================*/
 button:hover{
     box-shadow: 0 0 2px 1px var(--red);
+    background-color: var(--red);
+    color: var(--light);
+    transition: all 0.5s;
 }
 svg.icon:hover{
     filter: drop-shadow(1px 1px 2px var(--red));
@@ -178,6 +226,11 @@ svg.icon:hover{
 
 /*smaller screen======================================*/
 @media (max-width:700px){
+    .contents{
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: column;
+    }
     
     .intro{
         align-items: center;
@@ -200,6 +253,8 @@ svg.icon:hover{
     }
     .icon-container{
         padding-top: -5vh;
+        justify-items: center;
+        justify-content: center;
     }
 }
 
