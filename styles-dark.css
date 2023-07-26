@@ -35,7 +35,7 @@ html{
 }
 
 h1{
-    font-size: 4rem;
+    font-size: calc(2rem + 3vw);
     color: var(--red);
     font-weight: 600;
     text-align: right;
@@ -60,7 +60,8 @@ span{
 button{
     background-color: var(--dark);
     border: 1px solid var(--red);
-    color: var(--light);
+    color: var(--red);
+    font-weight: bolder;
     height: 30px;
     min-width: 7em;
     padding: .5em 1.5em;
@@ -165,7 +166,8 @@ ul img{
 #about h1{
     grid-column: span 2;
     text-align: left;
-    top: 20px
+    top: 20px;
+    line-height: .8em;
     
 }
 
@@ -188,15 +190,24 @@ ul img{
 .language-logo{
     grid-column: span 3;
     display: flex;
+    gap: 1em;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    align-content: rigth;
     padding-right: 5%;
     border-right: 1px solid var(--red);
 }
 .language-logo svg{
-    max-height: 8em;
+    height: 150px;
+    width: 25%;
+    object-fit: cover;
 }
 .education{
     grid-column: span 3;
     text-align: left;
+    margin-bottom: 1em;
 }
 .education li{
     margin-top: 10px;
@@ -210,6 +221,9 @@ ul img{
 }
 
 /*actions====================================*/
+nav li:hover{
+    color: var(--red);
+}
 button:hover{
     box-shadow: 0 0 2px 1px var(--red);
     background-color: var(--red);
@@ -249,7 +263,9 @@ svg.icon:hover{
     h1{
         font-size: 3rem;
         text-align: center;
+        margin-bottom: .9em;
     }
+    /*home-mobile===================*/
     #home .container{
         padding-top: 20vh;
     }
@@ -281,7 +297,7 @@ svg.icon:hover{
         justify-content: center;
     }
 
-    /*about me==================*/
+    /*about me-mobile==================*/
     #about .contents{
        padding-bottom: 1em;
     }
@@ -292,21 +308,28 @@ svg.icon:hover{
     #about .text{
         order: 0;
         top: 0;
-        
-       text-align: center;
-    }
-    #about h2{
-        text-shadow: 3px 3px 2px var(--gray);
-        text-align: center;
-        padding-top: 2em;
+       text-align: justify;
     }
     #about h2:first-of-type, .language-logo{
         border: none;
         padding: 0;
-        text-align: center;
     }
     #about h2:nth-of-type(2), .education, .buttons{
         order: 1;
+    }
+    #about h2:first-of-type, #about h2:nth-of-type(2){
+        text-shadow: 3px 3px 2px var(--gray);
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: .5em;
+    }
+
+    .language-logo{
+        justify-content: center;
+    }
+
+    .language-logo svg{
+        height: 110px;
     }
     .buttons{
         margin-top: 2em;
