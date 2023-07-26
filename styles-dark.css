@@ -226,22 +226,31 @@ svg.icon:hover{
 
 /*smaller screen======================================*/
 @media (max-width:700px){
+    *{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
     .container{
+        margin: 0 auto;
+        border: 1px solid red;
+    }
+    
+    .contents{
         display: flex;
         flex-direction: column;
+        align-content: center;
+        gap: 2em;
+        height: unset;
+        min-height: 100%;
+        border: 1px solid green;
+    }
+    h1{
+        font-size: 3rem;
     }
     #home{
-        order: 1;
-    }
-    #about{
-        order: 2;
-    }
-    .contents{
-        padding-top: 10vh;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
+        min-height: 100vh;
+        padding-top: 6em;
     }
     .intro h1{
     font-size: calc(1rem + 5.5vw);
@@ -249,10 +258,7 @@ svg.icon:hover{
     .intro{
         align-items: center;
     }
-    h1{
-        font-size: 10vh;
-        text-align: center;
-    }
+    
     .intro p{
         font-size: 4vw;
     }
@@ -271,25 +277,30 @@ svg.icon:hover{
         justify-content: center;
     }
 
-    /*about me===========*/
-    #home .container{
-        min-height: max-content;
-    }
+    /*about me==================*/
     #about .contents{
-        display: flex;
-        flex-direction: column;
+       padding-bottom: 1em;
     }
-    .text{
+    #about h1{
+        top: 0;
+    }
+    #about .text{
         order: 0;
+        top: 0;
+    }
+    #about h2{
+        text-shadow: 3px 3px 2px var(--gray);
+        text-align: right;
     }
     #about h2:first-of-type, .language-logo{
         border: none;
+        padding: 0;
+        
     }
     #about h2:nth-of-type(2), .education, .buttons{
         order: 1;
     }
-}
-
-@media (max-width:500px){
-
+    .buttons{
+        margin-top: 2em;
+    }
 }
