@@ -234,6 +234,7 @@ svg.icon:hover{
     .container{
         margin: 0 auto;
         padding-top: 10vh;
+        border: 1px solid red;
     }
     
     .contents{
@@ -243,14 +244,18 @@ svg.icon:hover{
         gap: 2em;
         height: unset;
         min-height: 100%;
+        border: 1px solid green;
     }
     h1{
         font-size: 3rem;
         text-align: center;
     }
-    #home{
-        min-height: 100vh;
+    #home .container{
         padding-top: 20vh;
+    }
+
+    #home .contents{
+        padding-top: 10vh;
     }
     .intro h1{
     font-size: calc(1rem + 5.5vw);
