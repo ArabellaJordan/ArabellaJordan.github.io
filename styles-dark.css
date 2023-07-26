@@ -226,10 +226,22 @@ svg.icon:hover{
 
 /*smaller screen======================================*/
 @media (max-width:700px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    #home{
+        order: 1;
+    }
+    #about{
+        order: 2;
+    }
     .contents{
         padding-top: 10vh;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
     }
     .intro h1{
     font-size: calc(1rem + 5.5vw);
@@ -260,6 +272,9 @@ svg.icon:hover{
     }
 
     /*about me===========*/
+    #home .container{
+        min-height: max-content;
+    }
     #about .contents{
         display: flex;
         flex-direction: column;
@@ -267,11 +282,11 @@ svg.icon:hover{
     .text{
         order: 0;
     }
-    #about h2:first-of-type{
+    #about h2:first-of-type, .language-logo{
         border: none;
     }
-    .language-logo{
-        border: none;
+    #about h2:nth-of-type(2), .education, .buttons{
+        order: 1;
     }
 }
 
