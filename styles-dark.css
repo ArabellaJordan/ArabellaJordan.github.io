@@ -231,7 +231,9 @@ svg.icon:hover{
         display: flex;
         flex-direction: column;
     }
-    
+    .intro h1{
+    font-size: calc(1rem + 5.5vw);
+    }
     .intro{
         align-items: center;
     }
@@ -255,6 +257,21 @@ svg.icon:hover{
         padding-top: -5vh;
         justify-items: center;
         justify-content: center;
+    }
+
+    /*about me===========*/
+    #about .contents{
+        display: flex;
+        flex-direction: column;
+    }
+    .text{
+        order: 0;
+    }
+    #about h2:first-of-type{
+        border: none;
+    }
+    .language-logo{
+        border: none;
     }
 }
 
