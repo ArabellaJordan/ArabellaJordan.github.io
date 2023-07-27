@@ -16,7 +16,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     position: relative;
 }
 
@@ -65,9 +65,9 @@ span{
     font-weight: 400;
 }
 button{
-    background-color: var(--dark);
-    border: 1px solid var(--red);
-    color: var(--red);
+    background-color: var(--light);
+    border: none;
+    color: var(--dark);
     font-weight: bolder;
     height: 30px;
     min-width: 7em;
@@ -111,8 +111,10 @@ ul img{
     max-height: 25px;
 }
 
-/*home================*/
-
+/*home======================================*/
+#home .contents{
+    padding-top: 10vh;
+}
 .intro{
     text-align: right;
     display: flex;
@@ -134,7 +136,6 @@ ul img{
     font-weight: 400;
 
 }
-
 .picture{
     max-height: 500px;
     width: 80%;
@@ -142,14 +143,12 @@ ul img{
     grid-row: span 2;
     border-radius: 200px 100px 90px 150px;
     align-self: center;
-    
 }
 
 .icon-container{
     display: flex;
     justify-content: end;
     gap: 5%;
-
 }
 .icon{
     height: 30px;
@@ -177,6 +176,7 @@ ul img{
     text-align: right;
     order:-1;    
     grid-column: span 4;
+    padding-bottom: 20px;
 }
 
 #about h2:first-of-type{
@@ -227,6 +227,9 @@ ul img{
     flex-direction: column;
     gap: 5em;
 }
+.contents h1{
+    text-align: left;
+}
 .item{
     display: flex;
     flex-direction: row;
@@ -243,12 +246,72 @@ ul img{
     box-shadow: 10px 10px 0 0 var(--red);
 }
 
+/*contact============================================*/
+#contact.container{
+    min-height: unset;
+}
+#contact .contents{
+    display:grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 1fr 30%;
+    margin: 2em auto;
+}
+#contact h1, #contact p{
+    text-align: left;
+    margin: 0;
+}
+.message{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 30px;
+    padding-top: 1em;
+    order: -1;
+    grid-row: span 2;
+}
+#contact input{
+    text-align: right;
+    vertical-align: top;
+    background-color: var(--light);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 1px 40px 1px black;
+    border: none;
+    padding: .5em;
+
+}
+input[type=email]{
+    width: 300px;
+    
+    color: var(--light);
+}
+input[type=textarea]{
+    height: 200px;
+    width: 80%;
+}
+
+/*footer===================================*/
+footer{
+    min-height: 20vh;
+    background-color: var(--light);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    
+}
+footer img{
+    height: 35px;
+}
+footer h3{
+    color: var(--dark);
+}
+
 /*actions====================================*/
 nav li:hover{
     color: var(--red);
 }
 button:hover{
-    box-shadow: 0 0 2px 1px var(--red);
+    box-shadow: 0 1px 40px 1px black;
     background-color: var(--red);
     color: var(--light);
     transition: all 0.5s;
@@ -286,16 +349,13 @@ svg.icon:hover{
         margin-bottom: .9em;
     }
     /*home-mobile===================*/
-    #home .container{
-        padding-top: 20vh;
-    }
-
     #home .contents{
-        padding-top: 10vh;
+        padding-top: 5vh;
         min-height: 100%;
     }
     .intro h1{
     font-size: calc(1rem + 5.5vw);
+    margin-bottom: 0;
     }
     .intro{
         align-items: center;
