@@ -33,6 +33,13 @@ html{
     margin: 0 auto;
     padding-top: 5%;
 }
+.contents{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 60% 1fr;
+    gap: 5%;
+}
 
 h1{
     font-size: calc(2rem + 3vw);
@@ -105,14 +112,7 @@ ul img{
 }
 
 /*home================*/
-.contents{
-    height: 80vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    grid-template-rows: 60% 1fr;
-    gap: 5%;
-}
+
 .intro{
     text-align: right;
     display: flex;
@@ -157,6 +157,7 @@ ul img{
 
 /*about me======================*/
 #about .contents{
+    height: 80vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 25% 10% 1fr 10%;
     font-weight: 400;
@@ -220,6 +221,28 @@ ul img{
     gap: 3%;
 }
 
+/*projects==================================*/
+#projects .contents{
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    gap:5%;
+
+}
+.right{
+    flex-direction: row-reverse;
+}
+#projects img{
+    height: 400px;
+    width: 50%;
+    object-fit: cover;
+    box-shadow: 10px 10px 0 0 var(--red);
+}
+
 /*actions====================================*/
 nav li:hover{
     color: var(--red);
@@ -242,13 +265,11 @@ svg.icon:hover{
 @media (max-width:700px){
     *{
         padding: 0;
-        margin: 0;
         text-align: center;
     }
     .container{
         margin: 0 auto;
         padding-top: 10vh;
-        border: 1px solid red;
     }
     
     .contents{
@@ -257,8 +278,7 @@ svg.icon:hover{
         align-content: center;
         gap: 2em;
         height: unset;
-        min-height: 100%;
-        border: 1px solid green;
+        min-height: unset;
     }
     h1{
         font-size: 3rem;
@@ -272,6 +292,7 @@ svg.icon:hover{
 
     #home .contents{
         padding-top: 10vh;
+        min-height: 100%;
     }
     .intro h1{
     font-size: calc(1rem + 5.5vw);
@@ -298,8 +319,10 @@ svg.icon:hover{
     }
 
     /*about me-mobile==================*/
+    
     #about .contents{
        padding-bottom: 1em;
+       height: unset;
     }
     #about h1{
         top: 0;
@@ -335,5 +358,23 @@ svg.icon:hover{
         margin-top: 2em;
         display: flex;
         justify-content: center;
+    }
+
+    /*projects-mobile==============================================*/
+    .item{
+        flex-direction: column;
+        margin-top: 0;
+        justify-content: space-between;
+    }
+    #projects h1{
+        margin-bottom: 0;
+    }
+    #projects img{
+        height: 300px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #projects h2{
+        text-shadow: 3px 3px 2px var(--gray);
     }
 }
