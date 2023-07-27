@@ -270,7 +270,7 @@ ul img{
     order: -1;
     grid-row: span 2;
 }
-#contact input{
+#contact input, textarea{
     text-align: right;
     vertical-align: top;
     background-color: var(--light);
@@ -279,31 +279,38 @@ ul img{
     box-shadow: 0 1px 40px 1px black;
     border: none;
     padding: .5em;
+    color: var(--dark);
 
 }
 input[type=email]{
     width: 300px;
-    
-    color: var(--light);
 }
-input[type=textarea]{
+textarea{
     height: 200px;
     width: 80%;
 }
 
+#contact button{
+    width: 7em;
+}
+
 /*footer===================================*/
 footer{
-    min-height: 20vh;
-    background-color: var(--light);
+    min-height: 10vh;
+    background-color: var(--dark);
+    border-top: 5px solid var(--light);
     text-align: center;
     backdrop-filter: blur(5px);
+    padding: 1em;
     
 }
 footer img{
     height: 35px;
 }
 footer h3{
-    color: var(--dark);
+    color: var(--light);
+    font-size: .8rem;
+    padding-top: .5em;
 }
 
 /*actions====================================*/
