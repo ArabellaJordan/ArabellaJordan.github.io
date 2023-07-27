@@ -343,7 +343,6 @@ svg.icon:hover{
     }
     
     .contents{
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -450,5 +449,22 @@ svg.icon:hover{
     }
 
     /*contact-mobile=====================*/
+    #contact .contents{
+        display:flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #contact .message{
+        order: 0;
+        align-items: center;
+    }
+    .message input, .message textarea{
+        width: 100%;
+    }
+    #contact button{
+        margin: 0 auto;
+    }
+
 
 }
