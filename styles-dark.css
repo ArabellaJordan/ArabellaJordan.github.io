@@ -156,7 +156,6 @@ ul img{
 
 /*about me======================*/
 #about .contents{
-    height: 80vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 25% 10% 1fr 10%;
     font-weight: 400;
@@ -386,10 +385,8 @@ svg.icon:hover{
     }
 
     /*about me-mobile==================*/
-    
     #about .contents{
        padding-bottom: 1em;
-       height: unset;
     }
     #about h1{
         top: 0;
