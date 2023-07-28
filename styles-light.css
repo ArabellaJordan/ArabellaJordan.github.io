@@ -5,51 +5,72 @@
     --light: #F7F7FF;
     --red: #E6113B;
     --gray: #7D8491;
+    --light-background: rgb(255, 255, 255);
 }
-*{
+*, *::before, *::after{
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
     font-size: 18px;
+    font-weight: bolder;
     color: var(--dark);
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     position: relative;
 }
 
 html{
-    background-color: var(--light);
+    background-color: var(--light-background);
     width: 100vw;
     overflow-x: hidden;
 }
 
 .container{
-    border: 1px solid purple;
     min-height: 100vh;
     max-width: 1250px;
     width: 90%;
     margin: 0 auto;
     padding-top: 5%;
 }
+.contents{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 60% 1fr;
+    gap: 5%;
+}
 
 h1{
-    font-size: 4rem;
+    font-size: calc(2rem + 3vw);
     color: var(--red);
     font-weight: 600;
+    text-align: right;
+    text-shadow: 5px 2px 0 var(--gray);
 }
-.left{
+h2{
+    font-size: 2rem;
+    font-weight: 400;
     text-align: left;
 }
-.right{
-    text-align: right;
+h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+h4{
+    color: var(--red);
+    font-weight: 400;
+}
+span{
+    font-weight: 400;
 }
 button{
     background-color: var(--dark);
-    border: 1px solid var(--red);
+    border: none;
     color: var(--light);
+    font-weight: bolder;
     height: 30px;
     min-width: 7em;
     padding: .5em 1.5em;
@@ -92,14 +113,9 @@ ul img{
     max-height: 25px;
 }
 
-/*home================*/
-.contents{
-    height: 80vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    grid-template-rows: 60% 1fr;
-    gap: 5%;
+/*home======================================*/
+#home .contents{
+    padding-top: 10vh;
 }
 .intro{
     text-align: right;
@@ -112,8 +128,9 @@ ul img{
 .intro h1{
     font-family: 'Poppins', sans-serif;
     font-size: calc(1rem + 4vw);
-    color: var(--light);
+    color: var(--dark);
     font-weight: 600;
+    text-shadow: 5px 2px 0 var(--red);
 }
 .intro p{
     font-size: calc(.5rem + 1vw);
@@ -121,9 +138,10 @@ ul img{
     font-weight: 400;
 
 }
-
 .picture{
     max-height: 500px;
+    width: 80%;
+    object-fit: cover;
     grid-row: span 2;
     border-radius: 200px 100px 90px 150px;
     align-self: center;
@@ -133,40 +151,178 @@ ul img{
     display: flex;
     justify-content: end;
     gap: 5%;
-
 }
 .icon{
     height: 30px;
 }
 
 /*about me======================*/
-#about.contents{
-    border: 1px solid greenyellow;
-    grid-template-columns: 1fr 80% ;
-    grid-template-rows: 80% 1fr;
-    gap: 5%;
+#about .contents{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25% 10% 1fr 10%;
     font-weight: 400;
+    gap: 2%;
 
 }
+#about h1{
+    grid-column: span 2;
+    text-align: left;
+    top: 20px;
+    line-height: .8em;
+    
+}
 
+.text{
+    top:35px;
+    text-align: right;
+    order:-1;    
+    grid-column: span 4;
+    padding-bottom: 20px;
+}
 
+#about h2:first-of-type{
+    grid-column: span 3;
+    text-align: right;
+    padding-right: 5%;
+    border-right: 1px solid var(--red);
+}
+#about h2:nth-of-type(2){
+    grid-column: span 3;
+}
 .language-logo{
-    grid-row: span 2;
+    grid-column: span 3;
     display: flex;
+    gap: 1em;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    align-content: rigth;
+    padding-right: 5%;
+    border-right: 1px solid var(--red);
 }
 .language-logo svg{
-    max-height: 8em;
+    height: 150px;
+    width: 25%;
+    object-fit: cover;
 }
-
+.education{
+    grid-column: span 3;
+    text-align: left;
+    margin-bottom: 1em;
+}
+.education li{
+    margin-top: 10px;
+}
 .buttons{
+    grid-column: span 6;
+    width: 100%;
     display: flex;
     justify-content: end;
-    gap: 5%;
+    gap: 3%;
+}
+
+/*projects==================================*/
+#projects .contents{
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+.contents h1{
+    text-align: left;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    gap:5%;
+
+}
+.right{
+    flex-direction: row-reverse;
+}
+#projects img{
+    height: 400px;
+    width: 50%;
+    object-fit: cover;
+    box-shadow: 10px 10px 0 0 var(--red);
+}
+
+/*contact============================================*/
+#contact.container{
+    min-height: unset;
+}
+#contact .contents{
+    display:grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 1fr 30%;
+    margin: 2em auto;
+}
+#contact h1, #contact p{
+    text-align: left;
+    margin: 0;
+}
+.message{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 30px;
+    padding-top: 1em;
+    order: -1;
+    grid-row: span 2;
+}
+#contact input, textarea{
+    text-align: right;
+    vertical-align: top;
+    background-color: var(--light);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 1px 40px 1px black;
+    border: none;
+    padding: .5em;
+    color: var(--dark);
+
+}
+input[type=email]{
+    width: 300px;
+}
+textarea{
+    height: 200px;
+    width: 80%;
+}
+
+#contact button{
+    width: 7em;
+}
+
+/*footer===================================*/
+footer{
+    min-height: 10vh;
+    background-color: var(--dark);
+    border-top: 5px solid var(--light);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    padding: 1em;
+    
+}
+footer img{
+    height: 35px;
+}
+footer h3{
+    color: var(--light);
+    font-size: .8rem;
+    padding-top: .5em;
 }
 
 /*actions====================================*/
+nav li:hover{
+    color: var(--red);
+}
 button:hover{
-    box-shadow: 0 0 2px 1px var(--red);
+    box-shadow: 0 1px 40px 1px black;
+    background-color: var(--red);
+    color: var(--light);
+    transition: all 0.5s;
 }
 svg.icon:hover{
     filter: drop-shadow(1px 1px 2px var(--red));
@@ -178,14 +334,41 @@ svg.icon:hover{
 
 /*smaller screen======================================*/
 @media (max-width:700px){
+    *{
+        padding: 0;
+        text-align: center;
+    }
+    .container{
+        margin: 0 auto;
+        padding-top: 10vh;
+    }
     
+    .contents{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: 2em;
+        height: unset;
+        min-height: unset;
+    }
+    h1{
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: .9em;
+    }
+    /*home-mobile===================*/
+    #home .contents{
+        padding-top: 5vh;
+        min-height: 100%;
+    }
+    .intro h1{
+    font-size: calc(1rem + 5.5vw);
+    margin-bottom: 0;
+    }
     .intro{
         align-items: center;
     }
-    h1{
-        font-size: 10vh;
-        text-align: center;
-    }
+    
     .intro p{
         font-size: 4vw;
     }
@@ -199,10 +382,88 @@ svg.icon:hover{
         object-position: 10% 10%;
     }
     .icon-container{
-        padding-top: -5vh;
+        justify-items: center;
+        justify-content: center;
     }
-}
 
-@media (max-width:500px){
+    /*about me-mobile==================*/
+    #about .contents{
+       padding-bottom: 1em;
+    }
+    #about h1{
+        top: 0;
+        text-align: center;
+    }
+    #about .text{
+        order: 0;
+        top: 0;
+       text-align: justify;
+    }
+    #about h2:first-of-type, .language-logo{
+        border: none;
+        padding: 0;
+    }
+    #about h2:nth-of-type(2), .education, .buttons{
+        order: 1;
+    }
+    #about h2:first-of-type, #about h2:nth-of-type(2){
+        text-shadow: 3px 3px 2px var(--gray);
+        text-align: center;
+        margin-top: 1em;
+        margin-bottom: .5em;
+    }
+
+    .language-logo{
+        justify-content: center;
+    }
+
+    .language-logo svg{
+        height: 110px;
+    }
+    .buttons{
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+    }
+
+    /*projects-mobile==============================================*/
+    .item{
+        flex-direction: column;
+        margin-top: 0;
+        justify-content: space-between;
+    }
+    #projects h1{
+        margin-bottom: 0;
+    }
+    #projects img{
+        height: 300px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #projects h2{
+        text-shadow: 3px 3px 2px var(--gray);
+    }
+    #projects button{
+        margin: 1em auto;
+    }
+
+    /*contact-mobile=====================*/
+    #contact .contents{
+        display:flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #contact .message{
+        order: 0;
+        align-items: center;
+    }
+    .message input, .message textarea{
+        width: 100%;
+    }
+    #contact button{
+        margin: 0 auto;
+    }
+
 
 }
