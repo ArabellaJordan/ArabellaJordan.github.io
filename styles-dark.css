@@ -279,9 +279,10 @@ ul img{
     border: none;
     padding: .5em;
     color: var(--dark);
+    font-weight: bold;
 
 }
-input[type=email]{
+input{
     width: 300px;
 }
 textarea{
