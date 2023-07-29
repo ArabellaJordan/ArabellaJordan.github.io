@@ -372,16 +372,19 @@ svg.icon:hover{
         min-height: 70px;
         height: max-content;
         padding: 1em 0;
+        transition: 2s;
         
     }
     .nav.active{
         display: flex;
+        transition: 2s;
     }
     .nav{
         display: none;
         flex-direction: column;
-        padding-top: 5%;
+        padding-top: 70px;
         align-items: center;
+        transition: 2s;
     }
     .toggle-button{
         display: flex;
