@@ -260,6 +260,9 @@ nav svg{
     box-shadow: 10px 10px 0 0 var(--red);
 }
 
+#projects button{
+    margin: 1em auto;
+}
 /*contact============================================*/
 #contact.container{
     min-height: unset;
