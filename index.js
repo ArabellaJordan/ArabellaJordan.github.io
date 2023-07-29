@@ -3,3 +3,10 @@ document.querySelector(".lightmode").addEventListener("click", function(){
     
 })
 
+var toggleButton = document.querySelector(".toggle-button");
+var nav = document.querySelector(".nav");
+
+toggleButton.addEventListener("click", function(){
+    nav.classList.toggle("active");
+});
+
