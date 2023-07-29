@@ -373,22 +373,35 @@ svg.icon:hover{
     nav{
         flex-direction: column;
         min-height: 70px;
-        height: max-content;
         padding: 1em 0;
-        
     }
-    .nav.active{
-        display: flex;
-    }
-    .nav{
-        display: none;
-        flex-direction: column;
-        padding-top: 70px;
-        align-items: center;
-    }
+
     .toggle-button{
         display: flex;
     }
+
+    .nav{
+        width: 50vw;
+        opacity: 0;
+        padding: 1em 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        transform: translateY(-10px);
+        transition: all 150ms;
+    }
+
+    .nav.active{
+        opacity: 1;
+        transform: translateY(0px);
+        background-color:var(--dark);
+        width: 100vw;
+        min-height: max-content;
+        margin-top: 50px; 
+    }
+    
+    
+    
     
     /*home-mobile===================*/
     #home .contents{
