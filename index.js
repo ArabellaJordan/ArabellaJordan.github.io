@@ -8,8 +8,19 @@ modeButton.addEventListener("click", function(){
     document.querySelector("body").classList.toggle("lightMode");
     document.querySelector(".intro h1").classList.toggle("lightMode");
     document.querySelector(".picture").classList.toggle("lightMode");
+    if (document.querySelector("body").classList.contains("lightMode")){
+        document.querySelector(".logo").src="./img/logo_black.png";
+        document.querySelector(".mode-button").src="./img/dark.png";
+    }
+    else{
+        document.querySelector(".logo").src="./img/logo_white.png";
+        document.querySelector(".mode-button").src="./img/light.png";
+    }
     if (document.querySelector(".nav").classList.contains("active")){
     document.querySelector(".nav.active").classList.toggle("lightMode");
+    }
+    else{
+        document.querySelector(".nav").classList.remove("lightMode");
     }
     for(let i = 0; i< buttons.length; i++){
         buttons[i].classList.toggle("lightMode");

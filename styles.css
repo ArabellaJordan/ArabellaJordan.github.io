@@ -286,6 +286,7 @@ nav svg{
     display: flex;
     flex-direction: row;
     gap:5%;
+    justify-content: space-between;
 
 }
 .right{
@@ -299,7 +300,7 @@ nav svg{
 }
 
 #projects button{
-    margin: 1em auto;
+    margin: 1em 0;
 }
 /*contact============================================*/
 #contact.container{
