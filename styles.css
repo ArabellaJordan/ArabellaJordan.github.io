@@ -408,7 +408,7 @@ svg.icon:hover{
         text-align: center;
         margin-bottom: .9em;
     }
-    /*navigation===================*/
+    /*navigation-mobile===================*/
     nav{
         flex-direction: column;
         min-height: 70px;
