@@ -9,10 +9,6 @@
 }
 *, *::before, *::after{
     font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    font-size: 18px;
-    font-weight: bolder;
-    color: var(--dark);
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -23,9 +19,14 @@
 }
 
 html{
-    background-color: var(--light-background);
+    background-color: var(--dark);
     width: 100vw;
     overflow-x: hidden;
+}
+body{
+    font-weight: 100;
+    font-size: 18px;
+    color: var(--light);
 }
 
 .container{
@@ -67,9 +68,9 @@ span{
     font-weight: 400;
 }
 button{
-    background-color: var(--dark);
+    background-color: var(--light);
     border: none;
-    color: var(--light);
+    color: var(--dark);
     font-weight: bolder;
     height: 30px;
     min-width: 7em;
@@ -81,6 +82,38 @@ button{
     align-items: center;
     cursor: pointer;
 }
+
+/*lightmodes========================*/
+body.lightMode{
+    background-color: var(--light-background);
+    color: var(--dark);
+    font-weight: bolder;
+}
+button.lightMode{
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+}
+button.lightMode{
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+}
+.nav.active.lightMode{
+    background-color: var(--light-background);
+}
+nav ul li.lightMode{
+    color: var(--dark);
+    font-weight: bolder;
+}
+.intro h1.lightMode{
+    color: var(--dark);
+}
+svg.lightMode{
+    filter: invert(100%);
+}
+.picture.lightMode{
+    filter: grayscale(10%);
+}
+
 /*navigation===============================*/
 nav{
     height: 70px;
@@ -88,10 +121,10 @@ nav{
     z-index: 1;
     padding: 0 10%;
     display: flex;
+    flex-direction: row-reverse;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    color: var(--gray);
     position: fixed;
     top: 0;
     left: 0;
@@ -101,16 +134,33 @@ nav{
 }
 
 .logo{
-    justify-self: flex-start;
     height: 40px;
+    position: absolute;
+    top: .8em;
+    left: 10%;
 }
 nav ul{
     display: flex;
     gap: 30px;
     font-size: 1.1rem;
 }
+nav ul li{
+    color: var(--light)
+}
 ul img{
     max-height: 25px;
+    width: fit-content;
+}
+
+/*mobile-nav===================*/
+nav svg{
+    max-height: 30px;
+}
+.toggle-button{
+    display: none;
+    position: absolute;
+    top: 1.1em;
+    right: 10%;
 }
 
 /*home======================================*/
@@ -128,7 +178,7 @@ ul img{
 .intro h1{
     font-family: 'Poppins', sans-serif;
     font-size: calc(1rem + 4vw);
-    color: var(--dark);
+    color: var(--light);
     font-weight: 600;
     text-shadow: 5px 2px 0 var(--red);
 }
@@ -145,6 +195,7 @@ ul img{
     grid-row: span 2;
     border-radius: 200px 100px 90px 150px;
     align-self: center;
+    filter: grayscale(100%);
 }
 
 .icon-container{
@@ -247,6 +298,9 @@ ul img{
     box-shadow: 10px 10px 0 0 var(--red);
 }
 
+#projects button{
+    margin: 1em auto;
+}
 /*contact============================================*/
 #contact.container{
     min-height: unset;
@@ -277,13 +331,14 @@ ul img{
     background-color: var(--light);
     border-radius: 5px;
     backdrop-filter: blur(5px);
-    box-shadow: 0 1px 40px 1px black;
+    box-shadow: 0 1px 20px 1px black;
     border: none;
     padding: .5em;
     color: var(--dark);
+    font-weight: bold;
 
 }
-input[type=email]{
+input{
     width: 300px;
 }
 textarea{
@@ -328,10 +383,6 @@ svg.icon:hover{
     filter: drop-shadow(1px 1px 2px var(--red));
 }
 
-
-
-
-
 /*smaller screen======================================*/
 @media (max-width:700px){
     *{
@@ -356,6 +407,40 @@ svg.icon:hover{
         text-align: center;
         margin-bottom: .9em;
     }
+    /*navigation===================*/
+    nav{
+        flex-direction: column;
+        min-height: 70px;
+        padding: 1em 0;
+    }
+
+    .toggle-button{
+        display: flex;
+    }
+
+    .nav{
+        width: 50vw;
+        opacity: 0;
+        padding: 1em 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        transform: translateY(-10px);
+        transition: all 150ms;
+    }
+
+    .nav.active{
+        opacity: 1;
+        transform: translateY(0px);
+        background-color:var(--dark);
+        width: 100vw;
+        min-height: max-content;
+        margin-top: 50px; 
+    }
+    
+    
+    
+    
     /*home-mobile===================*/
     #home .contents{
         padding-top: 5vh;
