@@ -9,6 +9,7 @@ const width = window.innerWidth;
 if(document.readyState){
     document.querySelector("html").classList.remove("html-preloader");
     document.querySelector(".preloader").classList.add("hide");
+    document.querySelector(".preloader-logo").classList.add("hide");
 }
 
 // document.onabort(load)
