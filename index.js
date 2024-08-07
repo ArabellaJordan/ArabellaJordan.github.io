@@ -6,6 +6,12 @@ const svg = document.querySelectorAll("svg");
 const width = window.innerWidth;
 
 
+if(document.readyState){
+    document.querySelector("html").classList.remove("html-preloader");
+    document.querySelector(".preloader").classList.add("hide");
+}
+
+// document.onabort(load)
 modeButton.addEventListener("click", function(){
     document.querySelector("body").classList.toggle("lightMode");
     document.querySelector(".intro h1").classList.toggle("lightMode");
