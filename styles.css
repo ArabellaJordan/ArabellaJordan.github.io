@@ -31,6 +31,8 @@ body {
   color: var(--light);
 }
 
+
+
 /* preloader */
 .preloader {
   width: 100%;
@@ -41,6 +43,7 @@ body {
   background-color: var(--dark);
   z-index: 999;
   overflow: hidden;
+  border: 1px solid gold;
 }
 
 .html-preloader {
@@ -52,11 +55,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  /* border: 1px solid greenyellow; */
+  border: 1px solid gold;
 }
 
-.hide{
-    display:none;
+.fadeout {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
 }
 
 /* preloader animation */
