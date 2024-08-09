@@ -5,17 +5,28 @@ const navigationTexts = document.querySelectorAll("nav ul li");
 const svg = document.querySelectorAll("svg");
 const width = window.innerWidth;
 
+// if(document.readyState){
+//     document.querySelector("html").classList.add("html-preloader");
+// }
+
+
+
 document.addEventListener('DOMContentLoaded', function(){
-    document.querySelector("html").classList.remove("html-preloader");
-    document.querySelector(".preloader").classList.add("fadeOut");
-    document.querySelector(".preloader-logo").classList.add("fadeOut");
+    document.querySelector("html").classList.add("html-preloader");
+    loading();
+    
 });
 
-// if(document.readyState){
-//     document.querySelector("html").classList.remove("html-preloader");
+// window.addEventListener('load', (event) => {
+//     // alert('The page has fully loaded');
 //     document.querySelector(".preloader").classList.add("fadeOut");
 //     document.querySelector(".preloader-logo").classList.add("fadeOut");
-// }
+// });
+
+
+function loading(){
+    // alert('eme');
+}
 
 // document.onabort(load)
 modeButton.addEventListener("click", function(){

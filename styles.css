@@ -31,39 +31,93 @@ body {
   color: var(--light);
 }
 
-
-
 /* preloader */
 .preloader {
   width: 100%;
   height: 100%;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   background-color: var(--dark);
   z-index: 999;
   overflow: hidden;
+  border: 1px solid rgb(216, 166, 0);
 }
 
 .html-preloader {
   overflow: hidden;
 }
+
 .preloader-logo {
   position: absolute;
-  top: 50vh;
+  width: 50%;
+  height: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
+  border: 1px solid red;
+  
+}
+
+#Path_2{
+    transform: translate(-10vw);
+}
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    height: 80px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    --c:no-repeat linear-gradient(#fff 0 0);
+    background: var(--c), var(--c);
+    background-size: 25% 50%;
+    animation: l5 1.5s infinite linear;
+  }
+  .loader:after {
+    transform: scale(-1);
+  }
+  @keyframes l5 {
+    0%,
+    5%   {background-position:33.4% 100%,66.6% 100%}
+    25%  {background-position:33.4% 100%,100% 0}
+    50%  {background-position:0 0,100% 0}
+    75%  {background-position:0 0,66.6% 100%}
+    95%,
+    100% {background-position:33.4% 100%,66.6% 100%}
+  } 
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
 }
 
 .fadeout {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s 2s, opacity 2s linear;
-}
+} */
 
 /* preloader animation */
-#Path_1 {
+/* #Path_1 {
   animation: animateOne -0.5s linear 1s infinite alternate;
 }
 
@@ -92,7 +146,8 @@ body {
     opacity: 100%;
     fill: var(--light);
   }
-}
+} */
+
 .container {
   min-height: 100vh;
   max-width: 1250px;
