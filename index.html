@@ -59,7 +59,7 @@ navigation bar
       </ul>
     </nav>
     <!--
-home section
+preloader
 -->
     <div class="preloader">
       <div class="preloader-logo">
@@ -85,13 +85,14 @@ home section
       </div>
     </div>
 
+    <!-- home section -->
     <section id="home" class="container">
-      <div class="contents">
-        <div class="intro">
-          <h1>Arabella Jordan</h1>
-          <p class="red">a web developer wannabe</p>
+      <div class="side">
+        <div class="arrow-down">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="line"></div>
         </div>
-        <img class="picture" src="./img/me.jpg" alt="Arabella" />
         <div class="icon-container">
           <a
             target="_blank"
@@ -147,9 +148,17 @@ home section
             </svg>
           </a>
           <a href="./file/jordan-resume.pdf" download
-            ><button class="icon">download CV</button></a
+            ><button id="cv">CV</button></a
           >
         </div>
+      </div>
+
+      <div class="contents">
+        <div class="intro">
+          <h1>Arabella Jordan</h1>
+          <p class="red">an aspiring developer</p>
+        </div>
+        <img class="picture" src="./img/me.jpg" alt="Arabella" />
       </div>
     </section>
 

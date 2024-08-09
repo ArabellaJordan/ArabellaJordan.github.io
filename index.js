@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', function(){
     
 });
 
-// window.addEventListener('load', (event) => {
-//     // alert('The page has fully loaded');
-//     document.querySelector(".preloader").classList.add("fadeOut");
-//     document.querySelector(".preloader-logo").classList.add("fadeOut");
-// });
+window.addEventListener('load', (event) => {
+    // alert('The page has fully loaded');
+    document.querySelector("html").classList.remove("html-preloader");
+    document.querySelector(".preloader").classList.add("fadeOut");
+    document.querySelector(".preloader-logo").classList.add("fadeOut");
+});
 
 
 function loading(){
