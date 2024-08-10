@@ -194,12 +194,13 @@ nav {
   box-shadow: 0 1px 40px 1px black;
   backdrop-filter: blur(5px);
   position: fixed;
+  z-index: 9;
 }
 
 nav > div {
   height: 70px;
   width: 1500px;
-  z-index: 9;
+
   display: flex;
   flex-direction: row;
   margin: 0 auto;
@@ -235,15 +236,25 @@ nav svg {
 }
 
 /* side */
+
+.side-container {
+  width: 15vw;
+  background-color: var(--light);
+  height: 100vh;
+  position: absolute;
+}
 .side {
+  width: 100%;
+  /* border: 1px solid pink; */
   position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: column-reverse;
   justify-content: end;
-  height: 100%;
+  height: 50%;
   gap: 30px;
   align-items: center;
+  z-index: 1;
 }
 .icon-container {
   display: flex;
@@ -254,6 +265,7 @@ nav svg {
 
 .icon {
   height: 30px;
+  fill: var(--dark);
 }
 
 .icon-container a svg:hover {
@@ -266,6 +278,8 @@ nav svg {
   height: 30px;
   border-radius: 5px;
   font-weight: bold;
+  background-color: var(--dark);
+  color: var(--light);
 }
 
 .arrow-down {
@@ -279,17 +293,19 @@ nav svg {
 .dot {
   width: 3px;
   height: 3px;
-  background-color: var(--light);
+  background-color: var(--dark);
 }
 .line {
-  background-color: var(--light);
+  background-color: var(--dark);
   width: 3px;
   height: 100px;
 }
+
 /*home======================================*/
 
 #home .contents {
   padding-top: 10vh;
+  /* border: 1px solid rebeccapurple; */
 }
 .intro {
   text-align: right;
@@ -312,8 +328,11 @@ nav svg {
   font-weight: 400;
 }
 .picture {
-  max-height: 500px;
-  width: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 10vh;
+  max-height: 100vh;
+  /* width: 80%; */
   object-fit: cover;
   grid-row: span 2;
   border-radius: 200px 100px 90px 150px;
