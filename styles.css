@@ -33,15 +33,12 @@ body {
 
 /* preloader */
 .preloader {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 0;
-  left: 0;
   background-color: var(--dark);
   z-index: 999;
   overflow: hidden;
-  /* border: 1px solid rgb(216, 166, 0); */
 }
 
 .html-preloader {
@@ -52,11 +49,10 @@ body {
   position: absolute;
   width: 50%;
   height: 50%;
-  top: 50%;
-  left: 50%;
+  top: 70%;
+  left: 68%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  /* border: 1px solid red; */
 }
 
 .fadeIn {
@@ -110,12 +106,9 @@ body {
   margin: 0 auto;
   padding-top: 5%;
 }
+
 .contents {
   width: 100%;
-  display: grid;
-  grid-template-columns: 60% 1fr;
-  grid-template-rows: 60% 1fr;
-  gap: 5%;
 }
 
 h1 {
@@ -190,16 +183,16 @@ svg.lightMode {
 
 /*navigation===============================*/
 nav {
-  width: 100%;
-  box-shadow: 0 1px 40px 1px black;
-  backdrop-filter: blur(5px);
+  width: 100vw;
+  /* box-shadow: 0 1px 40px 1px black; */
+  /* backdrop-filter: blur(5px); */
   position: fixed;
   z-index: 9;
 }
 
 nav > div {
   height: 70px;
-  width: 1500px;
+  width: 88%;
 
   display: flex;
   flex-direction: row;
@@ -219,9 +212,9 @@ nav ul {
 nav ul li {
   color: var(--light);
 }
-ul img {
+img.mode-button {
   max-height: 25px;
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 /*mobile-nav===================*/
@@ -304,8 +297,11 @@ nav svg {
 /*home======================================*/
 
 #home .contents {
-  padding-top: 10vh;
+  padding-top: 30vh;
   /* border: 1px solid rebeccapurple; */
+  display: grid;
+  grid-template-columns: 72% 1fr;
+  gap: 5%;
 }
 .intro {
   text-align: right;
@@ -314,10 +310,11 @@ nav svg {
   justify-content: end;
   align-items: end;
   align-content: end;
+  /* border: 1px solid red; */
 }
 .intro h1 {
   font-family: "Poppins", sans-serif;
-  font-size: calc(1rem + 4vw);
+  font-size: calc(1.9rem + 4vw);
   color: var(--light);
   font-weight: 600;
   text-shadow: 5px 2px 0 var(--red);
@@ -330,14 +327,11 @@ nav svg {
 .picture {
   position: absolute;
   bottom: 0;
-  right: 10vh;
+  right: 0%;
   max-height: 100vh;
-  /* width: 80%; */
-  object-fit: cover;
-  grid-row: span 2;
-  border-radius: 200px 100px 90px 150px;
   align-self: center;
   filter: grayscale(100%);
+  /* border: 1px solid pink;   */
 }
 
 /*about me======================*/
