@@ -203,6 +203,12 @@ nav > div {
 
 .logo {
   height: 40px;
+  opacity: 0;
+  /* animation-delay: 8s; */
+}
+
+.show-logo{
+  animation: showOnly 1s 4.5s ease-in forwards;
 }
 nav ul {
   display: flex;
@@ -235,10 +241,18 @@ nav svg {
   background-color: var(--light);
   height: 100vh;
   position: absolute;
+  transform-origin: top;
+  overflow: hidden;
+}
+
+.grow {
+  animation: grow 1.5s ease-out forwards;
+}
+.show {
+  animation: show 0.5s forwards;
 }
 .side {
   width: 100%;
-  /* border: 1px solid pink; */
   position: absolute;
   bottom: 0;
   display: flex;
@@ -261,6 +275,12 @@ nav svg {
   fill: var(--dark);
 }
 
+.icon > path{
+  opacity: 0;
+  box-shadow: 0 0 2px 3px black;
+}
+
+
 .icon-container a svg:hover {
   fill: #e6113b;
 }
@@ -273,6 +293,8 @@ nav svg {
   font-weight: bold;
   background-color: var(--dark);
   color: var(--light);
+  opacity: 0;
+  animation-delay: 3.4s;
 }
 
 .arrow-down {
@@ -287,11 +309,22 @@ nav svg {
   width: 3px;
   height: 3px;
   background-color: var(--dark);
+  opacity: 0;
+}
+
+.dot:nth-of-type(1) {
+  animation-delay: 3.1s;
+}
+.dot:nth-of-type(2) {
+  animation-delay: 2.8s;
 }
 .line {
   background-color: var(--dark);
   width: 3px;
   height: 100px;
+  transform-origin: bottom;
+  opacity: 0;
+  animation-delay: 1.5s;
 }
 
 /*home======================================*/
@@ -675,5 +708,42 @@ svg.icon:hover {
   }
   #contact button {
     margin: 0 auto;
+  }
+}
+
+/* animation */
+
+/* side animation */
+@keyframes grow {
+  from {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 3px 1px var(--dark);
+  }
+
+  50% {
+    box-shadow: 0 0 3px 1px var(--dark);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showOnly {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
